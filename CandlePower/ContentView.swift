@@ -55,18 +55,19 @@ struct ContentView: View {
             
             // Margin Display - Single line below timeframe
             HStack {
-                Text("Margin:")
+                Text("Margin Available:")
                     .font(.caption2)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.black)
                 Text("$\(Int(tradingEngine.account.marginAvailable))")
                     .font(.caption)
                     .fontWeight(.semibold)
+                    .foregroundColor(.red)
                 Text("|")
                     .font(.caption2)
                     .foregroundColor(.secondary)
-                Text("$\(Int(tradingEngine.account.totalMarginRequired))")
+                Text("Margin Required  $\(Int(tradingEngine.account.totalMarginRequired))")
                     .font(.caption2)
-                    .foregroundColor(.red)
+                    .foregroundColor(.black)
                 Spacer()
             }
             .padding(.horizontal)
